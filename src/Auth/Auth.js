@@ -57,7 +57,7 @@ export default class Auth {
 
     localStorage.setItem('access_token', authResult.accessToken);
     localStorage.setItem('id_token', authResult.idToken);
-    localStorage.setItem('id_tokenPayload', JSON.stringify(authResult.idTokenPayload.roles));
+    localStorage.setItem('id_tokenPayload', JSON.stringify(authResult.idTokenPayload['http://thermalcomfort/roles']));
     localStorage.setItem('expires_at', expiresAt);
     localStorage.setItem('scopes', JSON.stringify(scopes));
     // navigate to the home route
